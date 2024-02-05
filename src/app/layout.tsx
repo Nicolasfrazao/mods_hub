@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './styles/globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
 import { dark } from '@clerk/themes';
+import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: 'MODS HUB',
@@ -19,9 +20,16 @@ export default function RootLayout({
 
       }}
     >
-      <html lang="en">
+      <html lang="en"
+        suppressHydrationWarning
+      >
         <body>
-          { children }
+          <ThemeProvider
+            enableSystem={true}
+            defaultTheme="system"
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

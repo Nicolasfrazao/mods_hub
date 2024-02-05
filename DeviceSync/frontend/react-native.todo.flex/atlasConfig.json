@@ -1,0 +1,9 @@
+{
+    "appId": "devicesync-jzdni",
+    "appUrl": "https://realm.mongodb.com/groups/659d55fc25d42b33c13e9839/apps/65c114179656f7b9af58a5f0",
+    "baseUrl": "https://realm.mongodb.com",
+    "clientApiBaseUrl": "https://sa-east-1.aws.realm.mongodb.com",
+    "dataApiBaseUrl": "https://sa-east-1.aws.data.mongodb-api.com",
+    "dataExplorerLink": "https://cloud.mongodb.com/links/659d55fc25d42b33c13e9839/explorer/Cluster0/database/collection/find",
+    "dataSourceName": "mongodb-atlas"
+}
