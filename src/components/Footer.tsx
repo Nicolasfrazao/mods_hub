@@ -1,7 +1,17 @@
+"use client"
 import Link from 'next/link';
 import React from 'react'
+import { Button } from './ui/button';
 
 const Footer = () => {
+
+  const socialMedia: any[] = [
+    {
+      name: "GitHub",
+      url: "https://github.com",
+    },
+  ]
+
   return (
     <footer
       className='flex fixed bottom-0'
@@ -11,7 +21,16 @@ const Footer = () => {
           <p>©2024 Nicolas Frazao</p>
         </div>
         <div>
-          <ul></ul>
+          <ul>
+            { socialMedia.map( ( link: any ) => (
+              <Link
+                href={ link.url }
+                key={ link.name }
+              >
+                {link.name}
+              </Link>
+            ))}
+          </ul>
           <ul></ul>
         </div>
       </ul>

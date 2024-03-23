@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      gradientColorStops: theme => ( {
+        'logo-gradient': "linear-gradient(to right, rgb(148, 163, 184), rgb(8, 145, 178), rgb(55, 48, 163))"
+      }),
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

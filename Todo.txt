@@ -1,0 +1,5 @@
+things to do in future
+Main page
+  add theme switcher
+  add compatibility with phones
+  

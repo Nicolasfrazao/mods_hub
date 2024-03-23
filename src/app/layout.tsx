@@ -3,11 +3,16 @@ import './styles/globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
 import { dark } from '@clerk/themes';
 import { ThemeProvider } from '@/components/theme-provider';
+import { useState, useEffect,  } from 'react';
 
 export const metadata: Metadata = {
   title: 'MODS HUB',
 }
 
+const getUserSettings = async () => ( {
+});
+
+const askUserData = () => {}
 export default function RootLayout({
   children,
 }: {
@@ -23,7 +28,9 @@ export default function RootLayout({
       <html lang="en"
         suppressHydrationWarning
       >
-        <body>
+        <body
+          className=''
+        >
           <ThemeProvider
             enableSystem={true}
             defaultTheme="system"
