@@ -2,4 +2,8 @@ things to do in future
 Main page
   add theme switcher
   add compatibility with phones
-  
+
+Databases :
+  for blog : MySQL
+  for small archives : MongoDB
+  for larger archives : AWS

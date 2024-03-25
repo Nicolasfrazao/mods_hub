@@ -14,11 +14,11 @@ const Footer = () => {
 
   return (
     <footer
-      className='flex fixed bottom-0'
+      className='flex fixed bottom-0 '
     >
       <ul>
         <div>
-          <p>©2024 Nicolas Frazao</p>
+          <p>©2024 ModsHub</p>
         </div>
         <div>
           <ul>

@@ -47,6 +47,7 @@
     "framer-motion": "^10.18.0",
     "graphql": "^16.8.1",
     "graphql-yoga": "^5.1.1",
+    "lucide-react": "^0.363.0",
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.1",
     "next": "^14.1.4",

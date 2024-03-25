@@ -1,12 +1,18 @@
+"use client"
 import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
+import { ModeToggle } from "./ThemeButton";
+import { useEffect, useState} from "react";
 
 const searchParams = {}
 
 const Navbar = () => {
+
+  const [ searchBox, setSearchBox ] = useState("closed");
+
   return (
     <nav>
-      <div className="container mx-auto flex items-center justify-between bg-black py-3 px-4 ">
+      <div className="container max-w-full flex items-center justify-between bg-black py-3 px-4 ">
         <Link
           href={`/`}
         >
