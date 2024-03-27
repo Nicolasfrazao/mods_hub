@@ -3,12 +3,16 @@ import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { ModeToggle } from "./ThemeButton";
 import { useEffect, useState} from "react";
+import { Button } from "./ui/button";
 
-const searchParams = {}
+const handleSearch:string = (search?: string) => {}
+
 
 const Navbar = () => {
 
-  const [ searchBox, setSearchBox ] = useState("closed");
+  const [ searchBox, setSearchBox ] = useState("closed" ,);
+  const navLinks: any[]= []
+
 
   return (
     <nav>
@@ -24,10 +28,42 @@ const Navbar = () => {
           </p>
         </Link>
         <div>
-
+          { searchBox === "active" ? (
+            <div>
+              <input
+                type="text"
+                id="search"
+                name="search"
+                placeholder="Search..." >
+                  <Button>
+                    <i className="bx bx-search"></i>
+                  </Button>
+              </input>
+              <Button
+                onClick={()=>setSearchBox("closed")}
+              >
+                <i className="bx bx-x"></i>
+              </Button>
+            </div>
+          ):(
+          <Button
+                onClick={ () => setSearchBox( "active" ) }
+                className=""
+          >
+            <i className="bx bx-search" />
+          </Button>
+          )};
         </div>
         <div>
           <ul>
+            { navLinks.map( ( link:string ) => (
+              <Link
+                href={ `/${ link.url }` }
+                key={ link }
+              >
+                {link.name}
+              </Link>
+            ))}
           </ul>
         </div>
       </div>
